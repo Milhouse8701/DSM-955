@@ -1,19 +1,21 @@
-''' Program make a simple calculator that can add, subtract, multiply and divide using functions '''
+# Program make a simple calculator that can add, subtract, multiply and divide using functions
 
 print("Welcome to Basic Calculator.")
 print(" _____________________ ")
 print("|  _________________  |")
 print("| |              0. | |")
 print("| |_________________| |")
-print("|  ___ ___ ___   ___  |")
-print("| | 7 | 8 | 9 | | + | |")
-print("| |___|___|___| |___| |")
-print("| | 4 | 5 | 6 | | - | |")
-print("| |___|___|___| |___| |")
-print("| | 1 | 2 | 3 | | x | |")
-print("| |___|___|___| |___| |")
-print("| | . | 0 | = | | / | |")
-print("| |___|___|___| |___| |")
+print("|                ___  |")
+print("|  ___ ___ ___  | + | |")
+print("| | 7 | 8 | 9 | |___| |")
+print("| |___|___|___| | - | |")
+print("| | 4 | 5 | 6 | |___| |")
+print("| |___|___|___| | x | |")
+print("| | 1 | 2 | 3 | |___| |")
+print("| |___|___|___| | / | |")
+print("| | . | 0 | = | |___| |")
+print("| |___|___|___| | ^ | |")
+print("|               |___| |")
 print("|_____________________|")
 print("")
 print("Please select an operation.")
@@ -21,44 +23,57 @@ print("1.Add")
 print("2.Subtract")
 print("3.Multiply")
 print("4.Divide")
-# This function adds two numbers 
-def add(x, y):
-   return x + y
+print("5.Exponents")
 
-# This function subtracts two numbers 
+
+# This function adds two numbers
+def add(x, y):
+    return x + y
+
+
+# This function subtracts two numbers
 def subtract(x, y):
-   return x - y
+    return x - y
+
 
 # This function multiplies two numbers
 def multiply(x, y):
-   return x * y
+    return x * y
+
 
 # This function divides two numbers
 def divide(x, y):
-   return x / y
+    return x / y
 
-# Take input from the user 
-choice = input("Enter choice(1/2/3/4):")
+
+def exponent(x, y):
+    return x ** y
+
+# Take input from the user
+choice = input("Enter choice(1/2/3/4/5):")
 
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
 
 # Adds two inputs if choice 1 is selected.
 if choice == '1':
-   print(num1,"+",num2,"=", add(num1,num2))
+    print(num1, "+", num2, "=", add(num1, num2))
 
 # Subtracts two inputs if choice 2 is selected.
 elif choice == '2':
-   print(num1,"-",num2,"=", subtract(num1,num2))
+    print(num1, "-", num2, "=", subtract(num1, num2))
 
 # Multiplies two inputs if choice 3 is selected.
 elif choice == '3':
-   print(num1,"*",num2,"=", multiply(num1,num2))
+    print(num1, "*", num2, "=", multiply(num1, num2))
 
 # Divides two inputs if choice 4 is selected.
 elif choice == '4':
-   print(num1,"/",num2,"=", divide(num1,num2))
+    print(num1, "/", num2, "=", divide(num1, num2))
+
+elif choice == '5':
+    print(num1, "^", num2, "=", exponent(num1, num2))
 
 # Prints invalid input if input is not an integer
 else:
-   print("Invalid input")
+    print("Invalid input")
